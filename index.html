@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FighterTunnel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00b7ff;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: transparent;
+            border: 2px solid #00b7ff;
+            color: #00b7ff;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .config-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+
+        .config-section h3 {
+            color: #00b7ff;
+            margin-top: 0;
+        }
+
+        .config-content {
+            background: #000;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            word-break: break-all;
+            white-space: pre;
+            font-family: monospace;
+            color: #fff;
+            border: 1px solid #00b7ff;
+        }
+
+        .list-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+
+        .number {
+            color: #00b7ff;
+            margin-right: 15px;
+        }
+
+        .copy-btn {
+            padding: 5px 15px;
+            background: transparent;
+            border: 1px solid #00b7ff;
+            color: #00b7ff;
+            border-radius: 3px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+
+        .notes {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #00b7ff;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .config-section h4 {
+            color: #ffd700;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wilcard By FighterTunnel</h1>
+        <div class="subtitle">
+            <p>❏ All Server Sudah Support Wilcard ❏</p>
+            <p>Request Bug lain ? <a href="https://t.me/AutoFTbot">PM Admin</a></p>
+        </div>
+
+        <div class="buttons">
+            <button class="btn" onclick="toggleSection('sett')">Sett Wilcard</button>
+            <button class="btn" onclick="toggleSection('list')">List Bug Wilcard</button>
+        </div>
+
+        <div id="sett-section" class="hidden">
+            <div class="config-section">
+                <h3>Show Clash</h3>
+                
+                <h4>Set XCL:</h4>
+                <div class="config-content">proxies:
+  - name: XCL TLS ✅
+    server: ava.game.naver.com
+    port: 443
+    type: trojan
+    password: UUID AKUNMU
+    skip-cert-verify: true
+    sni: ava.game.naver.com.domain-akunmu.net
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: ava.game.naver.com.domain-akunmu.net
+    udp: true</div>
+                <button class="copy-btn" onclick="copyText(this.previousElementSibling.textContent)">Copy</button>
+
+                <h4>Set XCVIP:</h4>
+                <div class="config-content">
+proxies:
+  - name: XCVIP YT TLS ✅
+    server: support.zoom.us
+    port: 443
+    type: trojan
+    password: UUID AKUNMU
+    skip-cert-verify: true
+    sni: zoomgov.com.domain-akunmu.net
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: zoomgov.com.domain-akunmu.net
+    udp: true</div>
+                <button class="copy-btn" onclick="copyText(this.previousElementSibling.textContent)">Copy</button>
+
+                <h4>Set Viu:</h4>
+                <div class="config-content">
+proxies:
+  - name: VIU TLS ✅
+    server: zaintest.vuclip.com
+    port: 443
+    type: trojan
+    password: UUID AKUNMU
+    skip-cert-verify: true
+    sni: zaintest.vuclip.com.domain-akunmu.net
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: zaintest.vuclip.com.domain-akunmu.net
+    udp: true</div>
+                <button class="copy-btn" onclick="copyText(this.previousElementSibling.textContent)">Copy</button>
+            </div>
+        </div>
+
+        <div id="list-section" class="list-container">
+            <!-- List items will be generated by JavaScript -->
+        </div>
+
+        <div class="notes">
+            <p>❏ All Prokontol Bisa Gak Harus VLESS</p>
+            <p>❏ Bug lain tinggal sesuaikan aja yang ada di list wilcard</p>
+            <p>❏ Terutama TKP Jabar Kebarat. TKP lain juga boleh mencoba</p>
+        </div>
+
+        <footer>
+            © FighterTunnel
+        </footer>
+    </div>
+
+    <script>
+        const domains = [
+            'support.zoom.us',
+            'ava.game.naver.com',
+            'quiz.int.vidio.com',
+            'io.ruangguru.com',
+            'belajar.ruangguru',
+            'zaintest.vuclip.com',
+            'edu.ruangguru.com'
+        ];
+
+        // Generate list items
+        const listSection = document.getElementById('list-section');
+        domains.forEach((domain, index) => {
+            const div = document.createElement('div');
+            div.className = 'list-item';
+            div.innerHTML = `
+                <span><span class="number">${index + 1}</span>${domain}</span>
+                <button class="copy-btn" onclick="copyText('${domain}')">Copy</button>
+            `;
+            listSection.appendChild(div);
+        });
+
+        // Copy function
+        function copyText(text) {
+            navigator.clipboard.writeText(text);
+            const btn = event.target;
+            btn.textContent = 'Copied!';
+            setTimeout(() => {
+                btn.textContent = 'Copy';
+            }, 1000);
+        }
+
+        // Toggle sections
+        function toggleSection(section) {
+            const settSection = document.getElementById('sett-section');
+            const listSection = document.getElementById('list-section');
+            
+            if (section === 'sett') {
+                settSection.classList.remove('hidden');
+                listSection.classList.add('hidden');
+            } else {
+                settSection.classList.add('hidden');
+                listSection.classList.remove('hidden');
+            }
+        }
+
+        // Initialize with list view
+        toggleSection('list');
+    </script>
+</body>
+</html>
